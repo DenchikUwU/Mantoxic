@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MantoxicCasual</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#" onclick="maintance()">Головна</a></li>
+        <li><a href="#" onclick="alerts()">Про нас</a></li>
+        <li><a href="#" onclick="contact()">Зв’язатись з нами</a></li>
+      </ul>
+    </nav>
+    <h1><span class="highlight">Mantoxic</span>Cas<span class="alt">UAL</span></h1>
+    <img src="logo.png" alt="Mantoxic Casual Logo" class="logo" />
+  </header>
+
+  <section class="filters">
+    <input type="text" id="search" placeholder="пошук..." />
+    <button onclick="searchItems()">Знайти</button>
+
+    <select id="brandFilter" onchange="filterItems()">
+      <option value="All">Бренд</option>
+      <option value="Adidas">Adidas</option>
+      <option value="Puma">Puma</option>
+      <option value="Nike">Nike</option>
+      <option value="Stone Island">Stone Island</option>
+      <option value="Fred Perry">Fred Perry</option>
+      <option value="Manto">Manto</option>
+      <option value="Lonsdale">Lonsdale</option>
+      <option value="All">Все</option>
+    </select>
+
+    <select id="typeFilter" onchange="filterItems()">
+      <option value="All">Тип одягу</option>
+      <option value="Взуття">Взуття</option>
+      <option value="Кофта">Кофта</option>
+      <option value="Футболка">Футболка</option>
+      <option value="Штани">Штани</option>
+      <option value="All">Усе</option>
+    </select>
+
+    <a href="wishlist.html" class="icon-btn">❤️</a>
+    <a href="cart.html" class="icon-btn">🛒 <span id="cart-count">0</span></a>
+  </section>
+
+  <main id="product-list">
+    <!-- Продукти вставляються тут JavaScript-ом -->
+  </main>
+
+  <script src="products.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
