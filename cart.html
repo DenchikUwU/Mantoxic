@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Кошик - MantoxicCasual</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header>
+  <h1>Кошик</h1>
+  <a href="main.html" class="icon-btn">🏠 На головну</a>
+</header>
+
+<main id="cart-container" class="compact-container"></main>
+
+<section class="order-form">
+  <h2>Дані замовника</h2>
+  <input type="text" id="name" placeholder="Ім'я" />
+  <input type="text" id="surname" placeholder="Прізвище" />
+  <input type="text" id="address" placeholder="Адреса" />
+  <input type="text" id="phone" placeholder="Номер телефону" />
+  <input type="email" id="email" placeholder="Пошта" />
+  <a href="main.html" onclick="EndingOrder()">Продовжити</a>
+  <section class="order-form1">
+  <button onclick="clearCart()">Очистити кошик</button>
+  </section>
+</section>
+
+<script src="products.js"></script>
+<script src="cart.js"></script>
+</body>
+</html>
