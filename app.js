@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
   function renderProducts(items) {
     const container = document.getElementById("product-list");
+    if (!container) return;
     container.innerHTML = "";
   
     items.forEach(product => {
@@ -54,7 +55,8 @@ document.addEventListener("DOMContentLoaded", () => {
   
   function updateCartCount() {
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
-    document.getElementById("cart-count").textContent = cart.length;
+    const countElem = document.getElementById("cart-count");
+    if (countElem) countElem.textContent = cart.length;
   }
   
   function toggleWishlist(id) {
@@ -72,17 +74,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
     return wishlist.includes(id);
   }
-
+  
   function alerts(){
-      alert("Найкращий кежуальний магазин в Україні та Литві. Любий бренд в найкращій якості тільки у нас.")
+    alert("Найкращий кежуальний магазин в Україні та Литві. Любий бренд в найкращій якості тільки у нас.")
   }
-
+  
   function contact() {
-      alert("Наша почта: mantoxic@gmail.com         " +
-            "Литовський номер телефону: +37012323345        " +
-            "Український номер телефону: +380984357476         ")
+    alert("Наша почта: mantoxic@gmail.com\nЛитовський номер телефону: +37012323345\nУкраїнський номер телефону: +380984357476");
   }
-
+  
   function maintance() {
-      location.reload()
+    location.reload()
   }
+  
